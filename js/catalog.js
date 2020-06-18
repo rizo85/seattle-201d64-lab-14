@@ -33,9 +33,14 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 
+
+
+
 function handleSubmit(event) {
 
-  // TODO: Prevent the page from reloading
+
+
+
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -43,10 +48,19 @@ function handleSubmit(event) {
   updateCounter();
   updateCartPreview();
 
+  //// DONE!
+  event.preventDefault();
+
 }
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
+
+  console.log('in added item');
+
+  localStorage.setItem("lastname", "Smith");
+
+
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
