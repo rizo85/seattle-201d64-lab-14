@@ -23,6 +23,8 @@ function populateForm() {
 
     selectE.appendChild(catalogItem);
 
+    g.setAttribute("id", "Div1");
+
     console.log(Product.allProducts[i]);
 
   }
@@ -55,10 +57,11 @@ function handleSubmit(event) {
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-
+// var name = getElementById
   console.log('in added item');
 
-  localStorage.setItem("lastname", "Smith");
+  // console.log(getele)
+  // localStorage.setItem("lastname", "Smith");
 
 
   // TODO: suss out the item picked from the select list
