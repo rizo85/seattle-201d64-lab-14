@@ -17,13 +17,18 @@ function populateForm() {
 
     var catalogItem = document.createElement('option');
 
-    var textnode = document.createTextNode( Product.allProducts[i].name);
+    var textnode = document.createTextNode(Product.allProducts[i].name);
+
+    catalogItem.setAttribute('value', Product.allProducts[i].name);
+    catalogItem.setAttribute('id', Product.allProducts[i].name);
 
     catalogItem.appendChild(textnode);
 
+
+
+
     selectE.appendChild(catalogItem);
 
-    console.log(Product.allProducts[i]);
 
   }
 
@@ -55,10 +60,9 @@ function handleSubmit(event) {
 
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-
-  console.log('in added item');
-
-  localStorage.setItem("lastname", "Smith");
+  console.log('reached selection');
+  var x = document.getElementById('items').value;
+  console.log(x);
 
 
   // TODO: suss out the item picked from the select list
